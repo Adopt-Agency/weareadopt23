@@ -33,7 +33,7 @@ onMounted(() => {
       },
     )
   })
-  document.querySelectorAll('.footer').forEach((card) => {
+  document.querySelectorAll('.adopt').forEach((card) => {
     observer.observe(card)
   })
 })
@@ -47,7 +47,7 @@ onUnmounted(() => {
   <div class="adopt">
     <SiteHeader />
     <slot />
-      <Footer />
+    <Footer />
   </div>
 </template>
 
@@ -56,12 +56,12 @@ onUnmounted(() => {
   display: block;
 }
 
-.footer {
+.adopt .footer {
   opacity: 0;
 
 }
 
-.footer.show {
+.adopt.show .footer {
   opacity: 1;
   transition: opacity 0.5s;
 

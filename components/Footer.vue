@@ -22,7 +22,7 @@ export default {
 <template>
   <div
 
-    class="bg-[#FFDCDD] footer absolute w-full px-4 mx-auto md:px-8 mt-32 "
+    class="bg-[#FFDCDD] footer  w-full px-4 mx-auto md:px-8 mt-48 md:mt-64 "
   >
     <div class="px-8 py-32 md:py-48 mx-auto ">
       <div class="flex justify-center align-center">
