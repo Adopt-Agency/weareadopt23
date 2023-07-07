@@ -51,14 +51,13 @@ defineExpose({
 
 <template>
   <header
-    class="site-header" :class="{ ' scroll': scrolled, 'text-white  mix-blend-difference': isHome }"
+    class="site-header" :class="{ ' scroll': scrolled, 'text-white  mix-blend-difference': isHome, 'menuOpen': showMenu }"
   >
     <div class=" top-0 px-0 md:px-8 py-[1.75rem] bg-transparent wrapper">
       <div class="md:block hidden w-[calc(50%-70px)] md:w-[calc(52%-100px)]">
         <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit">
           Studio
         </NuxtLink>
-        <!-- <a href="/#studio">Studio</a> -->
       </div>
       <button
         class="w-[25px] h-[25px] mr-auto block relative left-[1rem] hamburger md:hidden"
@@ -246,6 +245,9 @@ a.router-link-exact-active {
 .mobile-menu {
   color: black;
   height:100vh;
+}
+.menuOpen {
+  mix-blend-mode: normal !important;
 }
 
 .adoptMenu-enter{

@@ -80,7 +80,7 @@ const carouselPics = [
 <template>
   <div class="studioCarousel">
     <Swiper
-      :slides-per-view="3"
+      :slides-per-view="1.5"
       :pagination="{
         clickable: true,
       }"
@@ -88,7 +88,7 @@ const carouselPics = [
       :breakpoints="{
 
         768: {
-          slidesPerView: 3,
+          slidesPerView: 1.5,
 
         },
         1024: {
