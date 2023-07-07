@@ -21,7 +21,7 @@ onMounted(() => {
   <div class="home">
     <div ref="scrollRef" class="introSection">
       <div class="intro absolute h-full w-full">
-        <h1 class=" text-center text-white uppercase text-collection font-judge md:text-xl min-[1900px]:text-xxl">
+        <h1 class=" text-center text-white uppercase text-homeHeading font-judge md:text-xl min-[1900px]:text-xxl">
           A brand is a living thing.
         </h1>
       </div>
@@ -34,10 +34,10 @@ onMounted(() => {
 
       <div id="studio" class=" text-red text">
         <ScrollSection bg-color="#FFFFFF">
-          <div class="px-8 mx-auto md:flex md:mt-48 mt-36">
+          <div class="px-8 mx-auto md:flex md:pt-48 pt-36">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold leading-tight md:w-[200px]  md:pt-0"
+                class="pb-6 font-headline leading-tight md:w-[200px]  md:pt-0"
               >
                 It’s not what we do. It’s who we are.
               </h3>
@@ -57,7 +57,7 @@ onMounted(() => {
 
           <div class=" md:mb-64">
             <h3
-              class="pb-6 pl-8 font-bold md:w-1/3  md:pt-0"
+              class="pb-6 pl-8 font-headline md:w-1/3  md:pt-0"
             >
               Archival Series
             </h3>
@@ -69,7 +69,7 @@ onMounted(() => {
           <div class="px-8 mx-auto my-24 md:flex ">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-[250px] leading-tight  md:pt-0"
+                class="pb-6 font-headline md:w-[250px] leading-tight  md:pt-0"
               >
                 Inspiration exists, but it has to find you working.
               </h3>
@@ -88,7 +88,7 @@ onMounted(() => {
           <div class="px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-1/3  md:pt-0"
+                class="pb-6 font-headline md:w-1/3  md:pt-0"
               >
                 We’re still exploring.
               </h3>
@@ -109,7 +109,7 @@ onMounted(() => {
           <div class="px-8 mx-auto text-white mt-36 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-[247px] leading-tight  md:pt-0"
+                class="pb-6 font-headline md:w-[247px] leading-tight  md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
@@ -300,7 +300,7 @@ onMounted(() => {
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <h3
-                    class="pb-6 font-bold md:w-1/3  md:pt-0"
+                    class="pb-6 font-headline md:w-1/3  md:pt-0"
                   >
                     Still with us?
                   </h3>
@@ -309,7 +309,7 @@ onMounted(() => {
                   <p class="mb-24 md:pr-24">
                     Great, so now you know a little bit about us. But relationships are built through interaction not presentation, so maybe it’s time we heard from you. If you’re interested in working with us, or just have some questions, drop us a note.
                   </p>
-                  <a class="relative text-center grid items-center ease-in-out duration-300 z-10 w-[235px] h-[56px] font-bold hover:bg-white hover:text-red border border-red  bg-red text-white rounded-full" href="mailto:hello@weareadopt.com">Reach Out</a>
+                  <a class=" text-center grid items-center ease-in-out duration-300  w-[235px] h-[56px] font-headline hover:bg-white hover:text-red border border-red  bg-red text-white rounded-full" href="mailto:hello@weareadopt.com">Reach Out</a>
                 </div>
               </div>
             </div>

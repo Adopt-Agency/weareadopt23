@@ -1,6 +1,8 @@
 <script setup>
-import { Grid, Pagination } from 'swiper'
-const modules = reactive([Grid])
+import { Grid, Scrollbar } from 'swiper'
+import 'swiper/css/scrollbar'
+
+const modules = reactive([Grid, Scrollbar])
 const carouselPics = [
   {
     image: 'https://cdn.sanity.io/images/vaa5yjnh/production/f49d73e7fa73c5695ac223bc449196eb62314cb9-1080x1080.png',
@@ -81,6 +83,10 @@ const carouselPics = [
   <div class="studioCarousel">
     <Swiper
       :slides-per-view="1.5"
+      :scrollbar="{
+        hide: false,
+        draggable: true,
+      }"
       :pagination="{
         clickable: true,
       }"
@@ -128,6 +134,10 @@ const carouselPics = [
   padding: 0  0 20px 20px;
   z-index:0;
 
+}
+
+.studioCarousel .swiper-wrapper {
+  margin-bottom: 40px;
 }
 
 .swiper-grid-column>.swiper-wrapper {

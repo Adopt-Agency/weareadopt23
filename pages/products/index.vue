@@ -50,6 +50,10 @@ const loadingPrev = ref(false)
 const { data } = await useAsyncData('collection', () => sanity.fetch(query))
 results.value = data.value.results
 count.value = data.value.count
+
+useHead({
+  title: computed(() => 'The Adopt Shop'),
+})
 </script>
 
 <template>
@@ -88,9 +92,9 @@ count.value = data.value.count
               height="941"
               class="productPhoto"
             />
-            <span class="block mt-4 leading-none font-heading "> {{ p.abbreviated }} </span>
-            <span class="leading-none font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
-            <p class="leading-none font-heading ">
+            <span class="block mt-4 text-lg leading-none font-heading "> {{ p.abbreviated }} </span>
+            <span class="leading-none text-lg font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
+            <p class="leading-none text-lg font-heading ">
               ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
             </p>
           </NuxtLink>

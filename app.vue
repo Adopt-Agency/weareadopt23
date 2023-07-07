@@ -93,7 +93,11 @@ useHead({
 }
 
 html {
-  @apply font-body bg-[#FFDCDD]   text-md xl:text-desktopFont min-[1900px]:text-lg tracking-wide;
+  @apply font-body  text-md xl:text-desktopFont min-[1900px]:text-lg tracking-wide;
+}
+
+html  {
+  scroll-behavior: smooth;
 }
 
 body {
