@@ -80,43 +80,44 @@ const carouselPics = [
 
 <template>
   <div class="studioCarousel">
-    <Swiper
-      :slides-per-view="1.5"
+    <ScrollSection bg-color="#FFFFFF">
+      <Swiper
+        :slides-per-view="1.5"
+        :pagination="{
+          clickable: true,
+        }"
 
-      :pagination="{
-        clickable: true,
-      }"
+        :speed="6000"
 
-      :speed="6000"
+        :breakpoints="{
 
-      :breakpoints="{
+          768: {
+            slidesPerView: 1.5,
 
-        768: {
-          slidesPerView: 1.5,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
 
-        },
-        1024: {
-          slidesPerView: 3,
-        },
-
-        1200: {
-          slidesPerView: 5,
-        },
-      }"
-      :autoplay="{
-        delay: 1,
-        disableOnInteraction: true,
-      }"
-      :modules="modules"
-      class="mySwiper"
-    >
-      <SwiperSlide v-for="slide in carouselPics" :key="slide" class="relative swipeImg">
-        <nuxt-picture
-          :src="slide.image"
-          :alt="slide.title"
-        />
-      </SwiperSlide>
-    </Swiper>
+          1200: {
+            slidesPerView: 5,
+          },
+        }"
+        :autoplay="{
+          delay: 1,
+          disableOnInteraction: true,
+        }"
+        :modules="modules"
+        class="mySwiper"
+      >
+        <SwiperSlide v-for="slide in carouselPics" :key="slide" class="relative swipeImg">
+          <nuxt-picture
+            :src="slide.image"
+            :alt="slide.title"
+          />
+        </SwiperSlide>
+      </Swiper>
+    </ScrollSection>
   </div>
 </template>
 
@@ -126,6 +127,10 @@ const carouselPics = [
   height: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.studioCarousel .scrollSection {
+  min-height: auto;
 }
 
 .studioCarousel .swiper-slide {
