@@ -21,7 +21,7 @@ onMounted(() => {
   <div class="home">
     <div ref="scrollRef" class="introSection">
       <div class="intro absolute h-full w-full">
-        <h1 class=" text-center text-white uppercase text-homeHeading font-judge md:text-xl min-[1900px]:text-xxl">
+        <h1 class=" text-center text-white uppercase  font-judge text-headline md:text-xl min-[1900px]:text-xxl">
           A brand is a living thing.
         </h1>
       </div>
