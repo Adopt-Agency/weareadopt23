@@ -1,8 +1,7 @@
 <script setup>
-import { Grid, Scrollbar } from 'swiper'
-import 'swiper/css/scrollbar'
+import { Autoplay, Grid } from 'swiper'
 
-const modules = reactive([Grid, Scrollbar])
+const modules = reactive([Grid, Autoplay])
 const carouselPics = [
   {
     image: 'https://cdn.sanity.io/images/vaa5yjnh/production/f49d73e7fa73c5695ac223bc449196eb62314cb9-1080x1080.png',
@@ -83,13 +82,12 @@ const carouselPics = [
   <div class="studioCarousel">
     <Swiper
       :slides-per-view="1.5"
-      :scrollbar="{
-        hide: false,
-        draggable: true,
-      }"
+
       :pagination="{
         clickable: true,
       }"
+
+      :speed="6000"
 
       :breakpoints="{
 
@@ -105,7 +103,10 @@ const carouselPics = [
           slidesPerView: 5,
         },
       }"
-
+      :autoplay="{
+        delay: 1,
+        disableOnInteraction: true,
+      }"
       :modules="modules"
       class="mySwiper"
     >
@@ -138,6 +139,8 @@ const carouselPics = [
 
 .studioCarousel .swiper-wrapper {
   margin-bottom: 40px;
+  transition-timing-function: linear;
+
 }
 
 .swiper-grid-column>.swiper-wrapper {
