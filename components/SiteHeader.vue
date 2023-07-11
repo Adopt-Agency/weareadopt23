@@ -55,7 +55,7 @@ defineExpose({
   >
     <div class=" top-0 px-0 md:px-8 py-[1.75rem] bg-transparent wrapper">
       <div class="md:block hidden w-[calc(50%-70px)] md:w-[calc(52%-100px)]">
-        <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit">
+        <NuxtLink :to="{ path: '/', hash: `#studio` }" class="link text-inherit">
           Studio {{ currentPath }}
         </NuxtLink>
       </div>
@@ -231,8 +231,11 @@ defineExpose({
 
 }
 
-a.router-link-exact-active {
-  @apply underline underline-offset-4	;
+@media (max-width: 768px) {
+
+  a.router-link-exact-active {
+    @apply underline underline-offset-4	;
+  }
 }
 
 .hamburger_line {

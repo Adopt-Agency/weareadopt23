@@ -81,7 +81,7 @@ const carouselPics = [
 <template>
   <div class="studioCarousel">
     <Swiper
-      :slides-per-view="1.75"
+      :slides-per-view="1.25"
       :pagination="{
         clickable: true,
       }"
