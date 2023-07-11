@@ -82,6 +82,7 @@ const carouselPics = [
   <div class="studioCarousel">
     <Swiper
       :slides-per-view="1.25"
+      :loop="true"
       :pagination="{
         clickable: true,
       }"
