@@ -56,7 +56,7 @@ defineExpose({
     <div class=" top-0 px-0 md:px-8 py-[1.75rem] bg-transparent wrapper">
       <div class="md:block hidden w-[calc(50%-70px)] md:w-[calc(52%-100px)]">
         <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit">
-          Studio
+          Studio {{ currentPath }}
         </NuxtLink>
       </div>
       <button
@@ -73,7 +73,7 @@ defineExpose({
       <transition name="adoptMenu">
         <div
           v-show="showMenu"
-          class="fixed top-0 z-[1000] left-0 w-full  text-md mobile-menu adoptMenu overlay bg-neon"
+          class="fixed top-0 z-[1000] left-0 w-full  text-md mobile-menu adoptMenu overlay  bg-red"
         >
           <div class="container p-4">
             <div class="flex justify-between pt-[.75rem]">
@@ -243,7 +243,7 @@ a.router-link-exact-active {
 }
 
 .mobile-menu {
-  color: black;
+ @apply text-white;
   height:100vh;
 }
 .menuOpen {
@@ -274,6 +274,7 @@ transition:.4s ease;
 }
 
 .menu-list a{
-  color: black;
+ @apply text-white;
+
 }
 </style>

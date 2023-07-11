@@ -92,9 +92,9 @@ useHead({
               height="941"
               class="productPhoto"
             />
-            <span class="block mt-4 text-lg leading-none font-heading "> {{ p.abbreviated }} </span>
-            <span class="leading-none text-lg font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
-            <p class="leading-none text-lg font-heading ">
+            <span class="block mt-4 text-md leading-none font-heading "> {{ p.abbreviated }} </span>
+            <span class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
+            <p class="leading-none text-md font-heading ">
               ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
             </p>
           </NuxtLink>

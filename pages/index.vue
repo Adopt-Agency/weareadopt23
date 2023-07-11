@@ -21,7 +21,7 @@ onMounted(() => {
   <div class="home">
     <div ref="scrollRef" class="introSection">
       <div class="intro absolute h-full w-full">
-        <h1 class=" text-center text-white uppercase  font-judge text-headline md:text-xl min-[1900px]:text-xxl">
+        <h1 class=" text-center text-white uppercase font-judge md:text-xl min-[1900px]:text-xxl">
           A brand is a living thing.
         </h1>
       </div>
@@ -31,45 +31,46 @@ onMounted(() => {
         <source src="https://cdn.sanity.io/files/vaa5yjnh/production/34cb409da5af7dfe2736c9012f70321f4386f2a9.mp4" type="video/mp4">
         <source src="https://cdn.sanity.io/files/vaa5yjnh/production/9a201ff390bbb15ff6184a2f7a3353ca18205466.webm" type="video/webm">
       </video>
-    </div>
 
-    <div id="studio" class=" text-red text">
-      <ScrollSection bg-color="#FFFFFF">
-        <div class="px-8 mx-auto md:flex md:pt-48 pt-36">
-          <div class="md:w-1/2">
+      <div id="studio" class=" text-red text">
+        <ScrollSection bg-color="#FFFFFF">
+          <div class="px-8 mx-auto md:flex md:mt-48 mt-36">
+            <div class="md:w-1/2">
+              <h3
+                class="pb-6 font-bold leading-tight md:w-[200px]  md:pt-0"
+              >
+                It’s not what we do. It’s who we are.
+              </h3>
+            </div>
+            <div class="md:w-1/2">
+              <p class="mb-6 md:pr-24">
+                A brand is not an object. It’s not something you can simply define in words or pictures, put away and take out to reference every so often, like a dictionary. A true brand is a living thing—like a person. A fusion of motivations and beliefs, personality and purpose, appearance and actions, that continually defines and reveals itself through every interaction and point of connection you share with it.
+
+                And like a person, it’s more difficult to be a great brand than just an okay one.
+              </p>
+
+              <p class="mb-24 md:pr-24">
+                A great brand has to have the desire and the discipline to decide, every day and with every action, who they want to be, and what they want to be for. That goes for us as well. At Adopt, we decide daily to craft bold strategies and designs that help build and shape brands to be great by harnessing the power of sport, athletes and culture. Not just because it’s where we come from, but because it’s what we believe: that in a divided world, sport has the unique ability to unite, inspire and connect. Which is something all great brands should aspire to.
+              </p>
+            </div>
+          </div>
+        </ScrollSection>
+        <ScrollSection bg-color="#FFFFFF">
+          <div class=" md:mb-64">
             <h3
-              class="pb-6 font-headline leading-tight md:w-[200px]  md:pt-0"
+              class="pb-6 pl-8 font-bold md:w-1/3  md:pt-0"
             >
-              It’s not what we do. It’s who we are.
+              Archival Series
             </h3>
+            <StudioCarousel />
           </div>
-          <div class="md:w-1/2">
-            <p class="mb-6 md:pr-24">
-              A brand is not an object. It’s not something you can simply define in words or pictures, put away and take out to reference every so often, like a dictionary. A true brand is a living thing—like a person. A fusion of motivations and beliefs, personality and purpose, appearance and actions, that continually defines and reveals itself through every interaction and point of connection you share with it.
-
-              And like a person, it’s more difficult to be a great brand than just an okay one.
-            </p>
-
-            <p class="mb-24 md:pr-24">
-              A great brand has to have the desire and the discipline to decide, every day and with every action, who they want to be, and what they want to be for. That goes for us as well. At Adopt, we decide daily to craft bold strategies and designs that help build and shape brands to be great by harnessing the power of sport, athletes and culture. Not just because it’s where we come from, but because it’s what we believe: that in a divided world, sport has the unique ability to unite, inspire and connect. Which is something all great brands should aspire to.
-            </p>
-          </div>
-        </div>
-
-        <div class=" md:mb-64">
-          <h3
-            class="pb-6 pl-8 font-headline md:w-1/3  md:pt-0"
-          >
-            Archival Series
-          </h3>
-          <StudioCarousel />
-        </div>
+        </ScrollSection>
 
         <ScrollSection bg-color="#FFFFFF">
           <div class="px-8 mx-auto my-24 md:flex ">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-headline md:w-[250px] leading-tight  md:pt-0"
+                class="pb-6 font-bold md:w-[250px] leading-tight  md:pt-0"
               >
                 Inspiration exists, but it has to find you working.
               </h3>
@@ -84,11 +85,12 @@ onMounted(() => {
               </p>
             </div>
           </div>
-
+        </ScrollSection>
+        <ScrollSection bg-color="#FFFFFF">
           <div class="px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-headline md:w-1/3  md:pt-0"
+                class="pb-6 font-bold md:w-1/3  md:pt-0"
               >
                 We’re still exploring.
               </h3>
@@ -106,10 +108,10 @@ onMounted(() => {
         </ScrollSection>
 
         <ScrollSection bg-color="#FF4534">
-          <div class="px-8 mx-auto text-white md:mt-36 md:flex">
+          <div class="px-8 mx-auto text-white mt-36 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-headline md:w-[247px] leading-tight  md:pt-0"
+                class="pb-6 font-bold md:w-[247px] leading-tight  md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
@@ -300,7 +302,7 @@ onMounted(() => {
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <h3
-                    class="pb-6 font-headline md:w-1/3  md:pt-0"
+                    class="pb-6 font-bold md:w-1/3  md:pt-0"
                   >
                     Still with us?
                   </h3>
@@ -309,13 +311,13 @@ onMounted(() => {
                   <p class="mb-24 md:pr-24">
                     Great, so now you know a little bit about us. But relationships are built through interaction not presentation, so maybe it’s time we heard from you. If you’re interested in working with us, or just have some questions, drop us a note.
                   </p>
-                  <a class=" text-center grid items-center ease-in-out duration-300  w-[235px] h-[56px] font-headline hover:bg-white hover:text-red border border-red  bg-red text-white rounded-full" href="mailto:hello@weareadopt.com">Reach Out</a>
+                  <a class="relative text-center grid items-center ease-in-out duration-300 z-10 w-[235px] h-[56px] font-bold hover:bg-white hover:text-red border border-red  bg-red text-white rounded-full" href="mailto:hello@weareadopt.com">Reach Out</a>
                 </div>
               </div>
             </div>
           </div>
         </ScrollSection>
-      </scrollsection>
+      </div>
     </div>
   </div>
 </template>
@@ -400,7 +402,7 @@ onMounted(() => {
 
 @media (max-width: 768px) {
   .intro h1 {
-    width: 17em;
+    width: 19em;
 }
 }
 

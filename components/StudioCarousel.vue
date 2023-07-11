@@ -80,44 +80,42 @@ const carouselPics = [
 
 <template>
   <div class="studioCarousel">
-    <ScrollSection bg-color="#FFFFFF">
-      <Swiper
-        :slides-per-view="1.5"
-        :pagination="{
-          clickable: true,
-        }"
+    <Swiper
+      :slides-per-view="1.75"
+      :pagination="{
+        clickable: true,
+      }"
 
-        :speed="6000"
+      :speed="6000"
 
-        :breakpoints="{
+      :breakpoints="{
 
-          768: {
-            slidesPerView: 1.5,
+        768: {
+          slidesPerView: 1.25,
 
-          },
-          1024: {
-            slidesPerView: 3,
-          },
+        },
+        1024: {
+          slidesPerView: 2.5,
+        },
 
-          1200: {
-            slidesPerView: 5,
-          },
-        }"
-        :autoplay="{
-          delay: 1,
-          disableOnInteraction: true,
-        }"
-        :modules="modules"
-        class="mySwiper"
-      >
-        <SwiperSlide v-for="slide in carouselPics" :key="slide" class="relative swipeImg">
-          <nuxt-picture
-            :src="slide.image"
-            :alt="slide.title"
-          />
-        </SwiperSlide>
-      </Swiper>
-    </ScrollSection>
+        1200: {
+          slidesPerView: 4.5,
+        },
+      }"
+      :autoplay="{
+        delay: 1,
+        disableOnInteraction: true,
+      }"
+      :modules="modules"
+      class="mySwiper"
+    >
+      <SwiperSlide v-for="slide in carouselPics" :key="slide" class="relative swipeImg">
+        <nuxt-picture
+          :src="slide.image"
+          :alt="slide.title"
+        />
+      </SwiperSlide>
+    </Swiper>
   </div>
 </template>
 
