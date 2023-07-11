@@ -73,7 +73,7 @@ defineExpose({
       <transition name="adoptMenu">
         <div
           v-show="showMenu"
-          class="fixed top-0 z-[1000] left-0 w-full  text-md mobile-menu adoptMenu overlay  bg-red"
+          class="fixed top-0 z-[1000] left-0 w-full   text-md mobile-menu adoptMenu overlay  bg-red"
         >
           <div class="container p-4">
             <div class="flex justify-between pt-[.75rem]">
@@ -244,7 +244,7 @@ a.router-link-exact-active {
 
 .mobile-menu {
  @apply text-white;
-  height:100vh;
+  height:102vh;
 }
 .menuOpen {
   mix-blend-mode: normal !important;

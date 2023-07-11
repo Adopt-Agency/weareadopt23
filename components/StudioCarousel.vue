@@ -141,7 +141,6 @@ const carouselPics = [
 }
 
 .studioCarousel .swiper-wrapper {
-  margin-bottom: 40px;
   transition-timing-function: linear;
 
 }

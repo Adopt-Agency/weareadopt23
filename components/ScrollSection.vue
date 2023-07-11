@@ -10,8 +10,9 @@ const props = defineProps({
 const observer = ref({})
 const scrollRef = ref({})
 const onEnter = () => {
-  document.body.style.setProperty('background', props.bgColor)
+  document.body.setAttribute('class', props.bgColor)
   console.log('entered')
+  console.log(props.bgColor)
 }
 
 const onExit = () => {

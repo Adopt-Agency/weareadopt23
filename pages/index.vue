@@ -21,23 +21,25 @@ onMounted(() => {
   <div class="home">
     <div ref="scrollRef" class="introSection">
       <div class="intro absolute h-full w-full">
-        <h1 class=" text-center text-white uppercase font-judge md:text-xl min-[1900px]:text-xxl">
+        <h1 class=" text-center text-white uppercase font-judge text-headline md:text-xl min-[1900px]:text-xxl">
           A brand is a living thing.
         </h1>
       </div>
     </div>
     <div class="w-full mx-auto ">
-      <video id="video-background" class="top-0 left-0 video-bg" autoplay loop muted playsinline>
-        <source src="https://cdn.sanity.io/files/vaa5yjnh/production/34cb409da5af7dfe2736c9012f70321f4386f2a9.mp4" type="video/mp4">
-        <source src="https://cdn.sanity.io/files/vaa5yjnh/production/9a201ff390bbb15ff6184a2f7a3353ca18205466.webm" type="video/webm">
-      </video>
+      <ScrollSection bg-color="transparent">
+        <video id="video-background" class="top-0 left-0 video-bg" autoplay loop muted playsinline>
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/34cb409da5af7dfe2736c9012f70321f4386f2a9.mp4" type="video/mp4">
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/9a201ff390bbb15ff6184a2f7a3353ca18205466.webm" type="video/webm">
+        </video>
+      </ScrollSection>
 
-      <div id="studio" class=" text-red text">
-        <ScrollSection bg-color="#FFFFFF">
-          <div class="px-8 mx-auto md:flex md:mt-48 mt-36">
+      <div id="studio" class=" md:pt-48 pt-36 text-red text">
+        <ScrollSection bg-color="white">
+          <div class="px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold leading-tight md:w-[200px]  md:pt-0"
+                class="md:pb-6 font-bold leading-tight md:w-[188px] lg:w-[210px]  md:pt-0"
               >
                 It’s not what we do. It’s who we are.
               </h3>
@@ -55,7 +57,7 @@ onMounted(() => {
             </div>
           </div>
         </ScrollSection>
-        <ScrollSection bg-color="#FFFFFF">
+        <ScrollSection bg-color="white">
           <div class=" md:mb-64">
             <h3
               class="pb-6 pl-8 font-bold md:w-1/3  md:pt-0"
@@ -66,11 +68,11 @@ onMounted(() => {
           </div>
         </ScrollSection>
 
-        <ScrollSection bg-color="#FFFFFF">
+        <ScrollSection bg-color="white">
           <div class="px-8 mx-auto my-24 md:flex ">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-[250px] leading-tight  md:pt-0"
+                class="md:pb-6 font-bold md:w-[250px] leading-tight  md:pt-0"
               >
                 Inspiration exists, but it has to find you working.
               </h3>
@@ -86,11 +88,11 @@ onMounted(() => {
             </div>
           </div>
         </ScrollSection>
-        <ScrollSection bg-color="#FFFFFF">
+        <ScrollSection bg-color="white">
           <div class="px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-1/3  md:pt-0"
+                class="md:pb-6 font-bold md:w-1/3  md:pt-0"
               >
                 We’re still exploring.
               </h3>
@@ -107,11 +109,11 @@ onMounted(() => {
           </div>
         </ScrollSection>
 
-        <ScrollSection bg-color="#FF4534">
-          <div class="px-8 mx-auto text-white mt-36 md:flex">
+        <ScrollSection bg-color="red">
+          <div class="px-8 mx-auto redbg mt-36 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="pb-6 font-bold md:w-[247px] leading-tight  md:pt-0"
+                class="md:pb-6 font-bold md:w-[247px] leading-tight  md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
@@ -296,13 +298,13 @@ onMounted(() => {
           </div>
         </ScrollSection>
 
-        <ScrollSection bg-color="#FFFFFF">
+        <ScrollSection bg-color="white">
           <div ref="currentSection" class="pb-10 duration-300 ease-in-out text-red md:pt-20 section bgWhite">
             <div class="px-8 mx-auto ">
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <h3
-                    class="pb-6 font-bold md:w-1/3  md:pt-0"
+                    class="md:pb-6 font-bold md:w-1/3  md:pt-0"
                   >
                     Still with us?
                   </h3>
@@ -363,6 +365,25 @@ onMounted(() => {
   @apply fixed w-full h-full top-0 left-0 ;
 }
 
+.white {
+  @apply bg-white;
+}
+
+.white header {
+  @apply text-red mix-blend-normal	;
+}
+
+.red header {
+  @apply text-white  mix-blend-normal	;
+}
+
+.red {
+  @apply bg-red;
+}
+
+.red .redbg {
+  @apply text-white;
+}
 .introHeadline  {
   margin: 10px auto 10px;
   white-space: nowrap;
@@ -404,6 +425,11 @@ onMounted(() => {
   .intro h1 {
     width: 19em;
 }
+
+.introSection {
+    height:102vh;
+  }
+
 }
 
 @keyframes type{

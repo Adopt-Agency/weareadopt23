@@ -110,4 +110,8 @@ h1 {
 .bgW {
   background: white !important;
 }
+
+.bgW header {
+  color:black !important;
+}
 </style>
