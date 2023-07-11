@@ -50,8 +50,7 @@ onMounted(() => {
               </p>
 
               <p class="mb-24 md:pr-24">
-                And like a person, it’s more difficult to be a great brand than just an okay one.
-                A great brand has to have the desire and the discipline to decide, every day and with every action, who they want to be, and what they want to be for. That goes for us as well. At Adopt, we decide daily to craft bold strategies and designs that help build and shape brands to be great by harnessing the power of sport, athletes and culture. Not just because it’s where we come from, but because it’s what we believe: that in a divided world, sport has the unique ability to unite, inspire and connect. Which is something all great brands should aspire to.
+                And like a person, it’s more difficult to be a great brand than just an okay one. A great brand has to have the desire and the discipline to decide, every day and with every action, who they want to be, and what they want to be for. That goes for us as well. At Adopt, we decide daily to craft bold strategies and designs that help build and shape brands to be great by harnessing the power of sport, athletes and culture. Not just because it’s where we come from, but because it’s what we believe: that in a divided world, sport has the unique ability to unite, inspire and connect. Which is something all great brands should aspire to.
               </p>
             </div>
           </div>
@@ -61,7 +60,7 @@ onMounted(() => {
             <h3
               class="pb-6 pl-8 font-bold md:w-1/3  md:pt-0"
             >
-              Archival Series
+              Archive
             </h3>
             <StudioCarousel />
           </div>
@@ -71,9 +70,9 @@ onMounted(() => {
           <div class="px-8 mx-auto my-20 md:flex ">
             <div class="md:w-1/2">
               <h3
-                class="md:pb-6 font-bold md:w-[250px] leading-tight  md:pt-0"
+                class="md:pb-6 font-bold  leading-tight  md:pt-0"
               >
-                Inspiration exists, but it has to find you working.
+                The only reason to change.
               </h3>
             </div>
             <div class="md:w-1/2">
