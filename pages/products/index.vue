@@ -6,7 +6,11 @@ const query = groq`{ "collection": *[_type == "collection"] {
     title,
   },
   abbreviated,
-
+  linkCollection -> {
+    slug {
+     current
+    }
+  },
   vector {
     asset-> {
         url,
@@ -70,13 +74,24 @@ useHead({
       <div class="relative grid gap-6 mx-auto md:pt-10 md:grid-cols-2">
         <div class="relative sm:min-h-[770px] min-h-[520px] xs:min-h-[820px]">
           <div class="absolute w-full h-full">
-            <nuxt-picture
-              :src="$urlFor(p.vector.asset.url).url()"
-              :alt="p.store.title"
-            />
-            <h2 class="absolute w-3/5 text-white text-collection sm:w-1/2 font-headline bottom-20 sm:top-64 md:top-auto md:bottom-60 left-4 md:left-10">
-              {{ p.store.title }} Collection
-            </h2>
+            <NuxtLink v-if="p.linkCollection" :to="`/stories/${p.linkCollection.slug.current}`">
+              <nuxt-picture
+                :src="$urlFor(p.vector.asset.url).url()"
+                :alt="p.store.title"
+              />
+              <h2 class="absolute w-3/5 text-white text-collection sm:w-1/2 font-headline bottom-20 sm:top-64 md:top-auto md:bottom-60 left-4 md:left-10">
+                {{ p.store.title }} Collection
+              </h2>
+            </NuxtLink>
+            <div v-else>
+              <nuxt-picture
+                :src="$urlFor(p.vector.asset.url).url()"
+                :alt="p.store.title"
+              />
+              <h2 class="absolute w-3/5 text-white text-collection sm:w-1/2 font-headline bottom-20 sm:top-64 md:top-auto md:bottom-60 left-4 md:left-10">
+                {{ p.store.title }} Collection
+              </h2>
+            </div>
           </div>
         </div>
         <div v-for="module in p.modules" :key="module.id" class="relative mb-0 md:mb-16 ">
@@ -92,7 +107,7 @@ useHead({
               height="941"
               class="productPhoto"
             />
-            <span class="block mt-4 text-md leading-none font-heading "> {{ p.abbreviated }} </span>
+            <span class="block mt-4 leading-none text-md font-heading "> {{ p.abbreviated }} </span>
             <span class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
             <p class="leading-none text-md font-heading ">
               ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
