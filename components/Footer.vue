@@ -33,7 +33,7 @@ export default {
     </div>
     <div class=" text-red justify-between block w-full py-20 md:flex">
       <div class="block md:flex">
-        <div class="flex-col md:flex md:mr-14">
+        <div class="flex-col flex md:mr-14 gap-2">
           <a href="mailto:hello@weareadopt.com" class="block leading-tight md:inline">hello@weareadopt.com</a>
           <a
             class="block leading-tight md:inline"
@@ -49,17 +49,15 @@ export default {
             rel="noopener noreferrer"
           >LinkedIn</a>
         </div>
-        <div class="flex-col pb-10 md:pb-6 md:flex">
-          <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit">
+        <div class="flex-col pb-10 md:pb-6 flex gap-2">
+          <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit leading-tight">
             Studio
           </NuxtLink>
-          <NuxtLink class="block leading-tight md:inline" to="/products">
+          <NuxtLink class="block leading-tight md:inline leading-tight" to="/products">
             Shop
           </NuxtLink>
-          <NuxtLink class="block leading-tight md:inline" to="/terms-of-service">
-            Support
-          </NuxtLink>
-          <NuxtLink class="block md:inline" to="/privacy-policy">
+
+          <NuxtLink class="block md:inline leading-tight" to="/privacy-policy">
             Privacy
           </NuxtLink>
         </div>

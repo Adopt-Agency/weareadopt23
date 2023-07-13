@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { SanityBlocks } from 'sanity-blocks-vue-component'
+import { Pagination } from 'swiper'
 import type { Product, ProductVariant } from '@/types/shopify'
 import ProductQuery from '@/apollo/queries/product'
-import 'swiper/css/pagination'
-import { Pagination } from 'swiper'
 
 interface ProductReturn {
   product: Product
@@ -105,6 +104,11 @@ const addToCart = async () => {
                   </div>
                 </div>
               </div>
+
+              <div
+                class="my-2 text-md 2xl:my-6 md:w-4/5 "
+                v-html="result.product.descriptionHtml"
+              />
             </div>
             <div class="w-full py-4 pl-0 bg-white md:h-full md:sticky px:4 md:px-0 md:pl-16 xl:pl-24 lg:w-3/4 xl:w-1/2 max-[1400px]:top-12 lg:top-0 min-[1500px]:top-1/4">
               <h1 class="mt-12 text-lg md:mt-0 font-heading leading-tight	">

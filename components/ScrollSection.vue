@@ -40,6 +40,6 @@ onUnmounted(() => {
 
 <style>
 .scrollSection {
-  min-height: 60vh;
+  min-height: 500px;
 }
 </style>
