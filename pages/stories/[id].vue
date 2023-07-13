@@ -50,7 +50,7 @@ useHead({ title: story.value?.title })
         {{ story.subtitle }}
       </h3>
       <div class="my-20 md:my-36 md:flex nowrap space-between gap-10">
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 firstBlock">
           <SanityBlocks :blocks="story.leftContent" />
         </div>
         <div class="md:w-1/2">
@@ -74,7 +74,7 @@ useHead({ title: story.value?.title })
       <div class="md:w-1/2 my-24">
         <SanityBlocks :blocks="story.signoff" />
       </div>
-      <div class="flex justify-center">
+      <div class="md:flex justify-center">
         <nuxt-picture :src="$urlFor(story.lastImage.asset._ref).url()" />
       </div>
     </div>
@@ -93,6 +93,9 @@ useHead({ title: story.value?.title })
   @apply md:w-full;
 }
 
+.firstBlock p:first-child {
+  @apply mb-10;
+}
 .top-height {
   @apply self-start;
 }
