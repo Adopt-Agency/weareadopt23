@@ -104,11 +104,6 @@ const addToCart = async () => {
                   </div>
                 </div>
               </div>
-
-              <div
-                class="my-2 text-md 2xl:my-6 md:w-4/5 "
-                v-html="result.product.descriptionHtml"
-              />
             </div>
             <div class="w-full py-4 pl-0 bg-white md:h-full md:sticky px:4 md:px-0 md:pl-16 xl:pl-24 lg:w-3/4 xl:w-1/2 max-[1400px]:top-12 lg:top-0 min-[1500px]:top-1/4">
               <h1 class="mt-12 text-lg md:mt-0 font-heading leading-tight	">
@@ -198,6 +193,23 @@ const addToCart = async () => {
                 >
                   Add to Bag
                 </UIButton>
+              </div>
+            </div>
+          </div>
+          <div v-for="tag in result.product.tags">
+            <div v-if="tag === 'Mia Lee'" class="flex no-wrap flex-row mt-20 gap-10">
+              <div class="w-1/2">
+                <p>
+                  Adopt x Mia Lee Collection
+                </p>
+                <p>
+                  In anticipation and celebration of an epic summer of women’s soccer, we’ve partnered with artist and proud Chicago native Mia Lee to create a product collection that captures the look, energy, and spirit of the women’s soccer experience today - raw, striking and passionate.
+                </p>
+              </div>
+              <div class="w-1/2">
+                <p>
+                  All profits will benefit Street Soccer, USA, an organization focused on increasing youth participation in sport by removing financial barriers, with a focus on social impact.
+                </p>
               </div>
             </div>
           </div>

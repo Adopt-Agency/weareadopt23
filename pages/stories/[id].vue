@@ -39,29 +39,29 @@ useHead({ title: story.value?.title })
 </script>
 
 <template>
-  <div v-if="story" class="px-4 mx-auto mt-6 ax-w-screen-lg bg-orange">
-    <div class="container px-6 mx-auto md:px-6 lg:px-24 py-32">
+  <div v-if="story" class="md:px-4 mx-auto mt-6 ax-w-screen-lg bg-orange">
+    <div class="md:container mx-auto md:px-6 lg:px-24 py-20">
       <nuxt-picture :src="$urlFor(story.image.asset._ref).url()" />
 
-      <h1 class=" mt-20 uppercase md:text-xl text-mobilexl font-judge">
+      <h1 class=" mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
         {{ story.title }}
       </h1>
-      <h3>
+      <h3 class="px-6 md:px-0">
         {{ story.subtitle }}
       </h3>
-      <div class="my-20 md:my-36 md:flex nowrap space-between gap-10">
-        <div class="md:w-1/2 firstBlock">
+      <div class="my-10 md:my-36 px-6 md:px-0 md:flex nowrap space-between gap-10">
+        <div class="md:w-1/2 storyBlock">
           <SanityBlocks :blocks="story.leftContent" />
         </div>
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 storyBlock">
           <SanityBlocks :blocks="story.rightContent" />
         </div>
       </div>
-      <div class="grid-cols-2 gap-6 px-4 md:px-0 md:grid">
+      <div class="grid-cols-2 md:gap-6  md:grid">
         <div
           v-for="module in story.modules"
           :key="module.id"
-          class="pb-10 md:pb-0"
+          class="pb-2 md:pb-0"
           :class="[module.length, module.width, module.imgSizes, module.variant]"
         >
           <div v-if="module.image">
@@ -71,10 +71,10 @@ useHead({ title: story.value?.title })
           </div>
         </div>
       </div>
-      <div class="md:w-1/2 my-24">
+      <div class="md:w-1/2 my-16  px-6 md:px-0">
         <SanityBlocks :blocks="story.signoff" />
       </div>
-      <div class="md:flex justify-center">
+      <div class="flex md:mt-0 mt-24 justify-center">
         <nuxt-picture :src="$urlFor(story.lastImage.asset._ref).url()" />
       </div>
     </div>
@@ -93,7 +93,7 @@ useHead({ title: story.value?.title })
   @apply md:w-full;
 }
 
-.firstBlock p:first-child {
+.storyBlock p {
   @apply mb-10;
 }
 .top-height {

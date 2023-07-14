@@ -13,7 +13,9 @@ const summaryLines = computed(() => ([
 
 <template>
   <div class="grid gap-5 pt-6 ">
-    <h4>Summary</h4>
+    <h4 class="font-headline">
+      Order Summary
+    </h4>
 
     <div>
       <template

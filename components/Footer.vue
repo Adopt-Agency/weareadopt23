@@ -63,7 +63,7 @@ export default {
         </div>
       </div>
 
-      <div class="flex-col md:flex">
+      <div class="flex-col leading-tight md:flex">
         <p>©Adopt {{ currentYear }}</p>
       </div>
     </div>
@@ -73,5 +73,11 @@ export default {
 <style scoped>
 .backgroundStudio {
   @apply bg-black text-white;
+}
+@media (max-width: 768px) {
+
+  .footer svg {
+    max-width:250px;
+  }
 }
 </style>

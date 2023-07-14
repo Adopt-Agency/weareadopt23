@@ -70,9 +70,9 @@ useHead({
         Curated products inspired by the world of sport, athletes and culture. 100% of proceeds from the sale of these items are contributed to support access to youth sports for girls in Portland, Oregon.
       </p>
     </div>
-    <div v-for="p in data.collection" :key="p.id" class="my-6 post md:my-0">
+    <div v-for="p in data.collection" :key="p.id" class="my-6  md:my-0">
       <div class="relative grid gap-6 mx-auto md:pt-10 md:grid-cols-2">
-        <div class="relative sm:min-h-[770px] min-h-[520px] xs:min-h-[820px]">
+        <div class="relative collectionTile min-h-[520px] ">
           <div class="absolute w-full h-full">
             <NuxtLink v-if="p.linkCollection" :to="`/stories/${p.linkCollection.slug.current}`">
               <nuxt-picture
@@ -94,7 +94,7 @@ useHead({
             </div>
           </div>
         </div>
-        <div v-for="module in p.modules" :key="module.id" class="relative mb-0 md:mb-16 ">
+        <div v-for="module in p.modules" :key="module.id" class="relative post mb-0 md:mb-16 ">
           <NuxtLink
             :key="module.productWithVariant.product.store.title"
             :to="`/products/${module.productWithVariant.product.store.slug.current}`"
@@ -125,11 +125,49 @@ useHead({
 }
 
 .post img {
-  @apply w-full min-h-[480px] sm:min-h-[749px] 2xl:min-h-[929px] ;
+  @apply w-full min-h-[480px] ;
    object-fit: cover;
 }
 
-.productPhoto img {
-  @applym max-h-full md:max-h-[742px];
-}
+@media (max-width: 850px) {
+
+    .collectionTile h2 {
+      top: 50%;
+    }
+
+    .collectionTile img {
+      width: 100%;
+    }
+
+  }
+
+  @media (max-width: 768px) {
+    .collectionTile {
+      min-height: 800px ;
+      margin-bottom: 40px;
+    }
+    .collectionTile h2 {
+      top: 80%;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .collectionTile {
+      min-height: 650px ;
+      margin-bottom: 00px;
+    }
+    .collectionTile h2 {
+      top: 60%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .collectionTile {
+      min-height: 480px ;
+      margin-bottom: 00px;
+    }
+    .collectionTile h2 {
+      top: 60%;
+    }
+  }
 </style>

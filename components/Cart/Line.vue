@@ -33,7 +33,7 @@ const removeLine = async () => {
 </script>
 
 <template>
-  <div class="gap-4 py-3 md:flex">
+  <div class="gap-4 py-6 md:flex border-t border-gray">
     <!-- Line Image -->
     <div
       v-if="image?.id"
@@ -48,18 +48,18 @@ const removeLine = async () => {
 
     <!-- Line Details -->
     <div class="flex-col justify-between flex-1 md:flex">
-      <div class="items-start justify-between md:flex">
-        <div class="flex flex-col gap-2">
-          <NuxtLink :to="`/products/${line.merchandise.product.handle}`">
-            <h4>{{ line.merchandise.product.title }}</h4>
+      <div class="items-start my-10 md:my-0 justify-between md:flex">
+        <div class="flex flex-col md:gap-2">
+          <NuxtLink class="leading-tight" :to="`/products/${line.merchandise.product.handle}`">
+            <span class="block leading-tight"> Adopt</span> {{ line.merchandise.product.title.replace("Adopt ", "") }}
           </NuxtLink>
-          <div class="flex gap-2">
+          <div class="flex md:gap-2">
             <p
               v-for="option in line.merchandise.selectedOptions"
               :key="option.name"
-              class="text-gray-500 text-md"
+              class="text-gray-500 leading-tight text-md"
             >
-              {{ option.name }}: {{ option.value }}
+              {{ option.name }} — {{ option.value }}
             </p>
           </div>
         </div>
@@ -67,30 +67,9 @@ const removeLine = async () => {
           <UIPrice class="block" :price="line.cost.subtotalAmount" />
         </div>
       </div>
-      <div class="items-center justify-between md:flex">
-        <div class="flex items-center gap-1">
-          <Icon
-            :name="line.merchandise.product.availableForSale
-              ? 'ion:checkmark'
-              : line.merchandise.quantityAvailable === 0
-                ? 'ion:alert'
-                : 'ion:close'"
-            :class="line.merchandise.product.availableForSale
-              ? 'text-green-500'
-              : line.merchandise.quantityAvailable === 0
-                ? 'text-yellow-500'
-                : 'text-red-500'"
-          />
-          <span class="text-md">{{
-            line.merchandise.product.availableForSale
-              ? 'In stock'
-              : line.merchandise.quantityAvailable === 0
-                ? 'Out of stock'
-                : 'Unavailable'
-          }}</span>
-        </div>
+      <div class="items-center justify-between ">
         <!-- Line Actions -->
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-2 w-full pb-6 justify-between	">
           <Icon
             v-if="loading"
             name="ion:load-c"
