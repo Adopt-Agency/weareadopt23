@@ -197,7 +197,7 @@ const addToCart = async () => {
             </div>
           </div>
           <div v-for="tag in result.product.tags">
-            <div v-if="tag === 'Mia Lee'" class="flex flex-column md:flex-row mt-20 gap-10">
+            <div v-if="tag === 'Mia Lee'" class="flex flex-col md:flex-row mt-20 gap-10">
               <div class="w-full md:w-1/2">
                 <p>
                   Adopt x Mia Lee Collection
