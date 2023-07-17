@@ -74,6 +74,10 @@ export default {
 .backgroundStudio {
   @apply bg-black text-white;
 }
+
+.footer svg {
+  rotate: 180deg;
+}
 @media (max-width: 768px) {
 
   .footer svg {

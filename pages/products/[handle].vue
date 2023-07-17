@@ -197,19 +197,21 @@ const addToCart = async () => {
             </div>
           </div>
           <div v-for="tag in result.product.tags">
-            <div v-if="tag === 'Mia Lee'" class="flex flex-col md:flex-row mt-20 gap-10">
-              <div class="w-full md:w-1/2">
-                <p>
-                  Adopt x Mia Lee Collection
-                </p>
-                <p>
-                  In anticipation and celebration of an epic summer of women’s soccer, we’ve partnered with artist and proud Chicago native Mia Lee to create a product collection that captures the look, energy, and spirit of the women’s soccer experience today - raw, striking and passionate.
-                </p>
-              </div>
-              <div class="w-full md:w-1/2">
-                <p>
-                  All profits will benefit Street Soccer, USA, an organization focused on increasing youth participation in sport by removing financial barriers, with a focus on social impact.
-                </p>
+            <div v-if="tag === 'Mia Lee'" class="mt-20 ">
+              <p>
+                Adopt x Mia Lee Collection
+              </p>
+              <div class="flex no-wrap flex-col md:flex-row gap-10">
+                <div class="md:w-1/2">
+                  <p>
+                    In anticipation and celebration of an epic summer of women’s soccer, we’ve partnered with artist and proud Chicago native Mia Lee to create a product collection that captures the look, energy, and spirit of the women’s soccer experience today - raw, striking and passionate.
+                  </p>
+                </div>
+                <div class="md:w-1/2">
+                  <p>
+                    All profits will benefit Street Soccer, USA, an organization focused on increasing youth participation in sport by removing financial barriers, with a focus on social impact.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
