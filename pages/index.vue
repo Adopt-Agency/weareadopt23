@@ -60,27 +60,6 @@ const scrollRef = ref({})
         </ScrollSection>
 
         <ScrollSection bg-color="white">
-          <div class="px-8 mx-auto my-20 md:flex ">
-            <div class="md:w-1/2">
-              <h3
-                class="md:pb-6 mb-2 md:mb-0 font-headline  leading-tight  md:pt-0"
-              >
-                The only reason to change.
-              </h3>
-            </div>
-            <div class="md:w-1/2">
-              <p class="mb-6 md:pr-24">
-                When things are great, is when you see a possibility for something greater.
-                For Adopt, that happened on a front porch at the height of covid. A simple idea between three friends who had worked together for years at Nike. Each highly ambitious and committed, with decades of success and a hunger to build on it with people who made them each better. Each with the desire to continue to work with sport and athletes to change culture, conversations and businesses. And each with a question forming in the back of their mind: “Could we create a company and a culture where you could win at work and in life?”
-              </p>
-
-              <p class=" md:pr-24">
-                The answer was Adopt—a brand and creative agency focusing on what they collectively knew best and loved most: Sport, Athletes and Culture.
-              </p>
-            </div>
-          </div>
-        </ScrollSection>
-        <ScrollSection bg-color="white">
           <div class="px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
