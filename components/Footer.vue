@@ -49,7 +49,7 @@ export default {
             rel="noopener noreferrer"
           >LinkedIn</a>
         </div>
-        <div class="flex-col pb-10 md:pb-6 flex gap-2">
+        <div class="flex-col pb-10 md:pb-6 flex gap-2 pt-2 md:p-0">
           <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit leading-tight">
             Studio
           </NuxtLink>

@@ -107,7 +107,8 @@ const addToCart = async () => {
             </div>
             <div class="w-full py-4 pl-0 bg-white md:h-full md:sticky px:4 md:px-0 md:pl-16 xl:pl-24 lg:w-3/4 xl:w-1/2 max-[1400px]:top-12 lg:top-0 min-[1500px]:top-1/4">
               <h1 class="mt-12 text-lg md:mt-0 font-heading leading-tight	">
-                <span class="block"> Adopt</span> {{ result.product.title.replace("Adopt ", "") }}
+                <span v-if="result.product.title.includes('Adopt x Mia Lee') " class="block"><span class="block"> Adopt x Mia Lee</span> {{ result.product.title.replace("Adopt x Mia Lee ", "") }} </span>
+                <span v-else class="block "><span class="block"> Adopt</span> {{ result.product.title.replace("Adopt ", "") }} </span>
               </h1>
               <UIPriceRange
                 v-if="!selectedVariant?.id"
@@ -128,31 +129,11 @@ const addToCart = async () => {
                 v-html="result.product.descriptionHtml"
               />
 
-              <div class="flex flex-wrap gap-2 my-6 md:my-10 ">
+              <div v-if="selectedVariant?.title != 'Default Title'" class="flex flex-wrap gap-2 my-6 md:my-10 ">
                 <div v-for="option in result.product.options" :key="option.id" class="">
                   <p class="text-md">
                     {{ option.name }}  —  {{ selectedVariant?.title }}
                   </p>
-
-                  <!-- <div v-for="value in option.values" :key="value.id">
-                    <input
-                      :id="value.id"
-                      v-model="selectedVariant"
-                      type="radio"
-                      :value="value"
-                      class="hidden"
-                      :class="{ ' opacity-70': value.quantityAvailable === 0 }"
-                      :disabled="value.quantityAvailable === 0"
-                    >
-
-                    <label
-                      class="cursor-pointer text-md "
-                      :for="value.id"
-                      @click="selectedVariant = !selectedVariant"
-                    >
-                      {{ value }}
-                    </label>
-                  </div> -->
 
                   <div class="flex flex-wrap gap-2 mt-6">
                     <div

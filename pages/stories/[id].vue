@@ -71,10 +71,10 @@ useHead({ title: story.value?.title })
           </div>
         </div>
       </div>
-      <div class="md:w-1/2 my-16  px-6 md:px-0">
+      <div class="md:w-1/2 mt-6 mb-24 px-6 md:px-0">
         <SanityBlocks :blocks="story.signoff" />
       </div>
-      <div class="flex md:mt-0 mt-24 justify-center">
+      <div class="flex md:mt-0 mt-36 justify-center">
         <nuxt-picture :src="$urlFor(story.lastImage.asset._ref).url()" />
       </div>
     </div>

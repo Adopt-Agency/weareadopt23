@@ -108,7 +108,8 @@ useHead({
               class="productPhoto"
             />
             <span class="block mt-4 leading-none text-md font-heading "> {{ p.abbreviated }} </span>
-            <span class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
+            <span v-if="p.store.title === 'Adopt' " class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
+            <span v-if="p.store.title === 'Adopt x Mia Lee' " class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt x Mia Lee ", "") }} </span>
             <p class="leading-none text-md font-heading ">
               ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
             </p>
