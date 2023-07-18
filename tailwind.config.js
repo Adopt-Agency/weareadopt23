@@ -16,6 +16,7 @@ module.exports = {
       lg: ['22px', '39px'],
       collection: ['32px', '44px'],
       headline: ['30px', '34px'],
+      homeHeadline: ['60px', '1'],
       mobilexl: ['44px', '54px'],
       xl: ['80px', '1.1'],
       xxl: ['150px', '1.1'],
