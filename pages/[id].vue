@@ -12,12 +12,12 @@ useHead({
 
 <template>
   <div v-if="legal" class="px-4 mx-auto pt-36 container overflow-x-hidden ">
-    <div class="flex gap-10">
-      <h1 class="pb-24 w-1/4  ">
+    <div class="flex md:flex-row flex-col  gap-10">
+      <h1 class="md:pb-24 pb-2 md:w-1/4 w-full  ">
         {{ legal.title }}
       </h1>
       <div
-        class="w-3/4"
+        class="md:w-3/4 w-full"
       >
         <SanityBlocks :blocks="legal.body" />
       </div>
