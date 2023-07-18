@@ -20,10 +20,10 @@ useHead({
 
       <div id="studio" class=" md:pt-48 pt-36 text-red text">
         <ScrollSection bg-color="white">
-          <div class="px-8 mx-auto md:flex">
+          <div class="px-6 md:px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-headline leading-tight md:w-[188px] lg:w-[190px] 2xl:w-[200px]  md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl  uppercase leading-tight w-[62%] md:w-[43%] md:pt-0"
               >
                 It’s not what we do. It’s who we are.
               </h3>
@@ -41,22 +41,17 @@ useHead({
         </ScrollSection>
         <ScrollSection bg-color="white">
           <div class=" md:mb-24">
-            <h3
-              class="mb-2 pl-8 font-headline md:w-1/3  md:pt-0"
-            >
-              Archive
-            </h3>
             <StudioCarousel />
           </div>
         </ScrollSection>
 
         <ScrollSection bg-color="white">
-          <div class="px-8 mx-auto md:flex">
+          <div class="px-6 md:px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="md:pb-6 font-headline  leading-tight w-[65%] md:w-1/3  md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-full md:pt-0"
               >
-                We know the road, <br> but we’re still exploring
+                We know the road, but we’re still exploring
               </h3>
             </div>
             <div class="md:w-1/2">
@@ -72,10 +67,10 @@ useHead({
         </ScrollSection>
 
         <ScrollSection bg-color="red">
-          <div class="px-8 mx-auto redbg mt-36 md:mt-6 md:flex">
+          <div class=" px-6 md:px-8 mx-auto redbg mt-36 md:mt-6 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="md:pb-6 font-headline md:w-[247px] w-[200px] mb-1.5 md:mb-0 leading-normal  md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-full md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
@@ -87,7 +82,7 @@ useHead({
             </div>
           </div>
 
-          <div class="grid container mx-auto items-center grid-cols-2 gap-10 mt-20 md:grid-cols-3 justify-items-center brands ">
+          <div class="grid px-6 container mx-auto items-center grid-cols-2 gap-10 mt-20 md:grid-cols-3 justify-items-center brands ">
             <div class="md:my-4 brandLogo">
               <svg viewBox="0 0 466 296" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M122.953 153.112L111.661 135.264H111.561V153.145H101V111.802H111.561V130.385H111.661L123.351 111.802H134.411L120.728 132.39L135.307 153.112H122.953Z" fill="currentColor" />
@@ -254,11 +249,11 @@ useHead({
 
         <ScrollSection bg-color="white">
           <div ref="currentSection" class="pb-10 duration-300 ease-in-out text-red md:mt-24 pt-20 md:pt-40 section bgWhite">
-            <div class="px-8 mx-auto ">
+            <div class="px-6 md:px-8 mx-auto ">
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <h3
-                    class="md:pb-6 font-headline md:w-1/3 pt-20 md:pt-0"
+                    class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-3/5 md:w-1/3 md:pt-0"
                   >
                     Still with us?
                   </h3>

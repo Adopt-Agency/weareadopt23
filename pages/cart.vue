@@ -14,7 +14,7 @@ useHead({
       class="grid-cols-10 gap-10 md:grid items-center"
     >
       <div class="col-span-10 gap-6 md:col-start-1 md:grid md:col-span-10">
-        <div class="pb-6 md:pb-0">
+        <div v-if="cartLines.edges.length" class="pb-6 md:pb-0">
           <h1 class="font-headline leading-tight">
             Shopping Bag
           </h1>

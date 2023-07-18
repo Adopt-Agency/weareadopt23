@@ -75,6 +75,7 @@ const removeLine = async () => {
             name="ion:load-c"
             class="w-5 h-5 text-gray-500 animate-spin"
           />
+
           <select
             v-if="line.merchandise.quantityAvailable > 1"
             v-model="stagedQuantity"

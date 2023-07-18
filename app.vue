@@ -97,9 +97,6 @@ html  {
 body {
   transition: color 0.5s, background-color 0.5s;
 }
-h1 {
-  @apply font-judge;
-}
 
 .bgW {
   background: white !important;

@@ -35,8 +35,8 @@ onUnmounted(() => {
       </div>
     </div>
     <div class=" text-red justify-between block w-full py-20 md:flex">
-      <div class="block md:flex">
-        <div class="flex-col flex md:mr-14 gap-2">
+      <div class=" flex-col md:flex-row flex">
+        <div class="order-last md:order-first flex-col mb-10 md:mb-0 flex md:mr-14 gap-2">
           <a href="mailto:hello@weareadopt.com" class="block leading-tight md:inline">hello@weareadopt.com</a>
           <a
             class="block leading-tight md:inline"
@@ -52,7 +52,7 @@ onUnmounted(() => {
             rel="noopener noreferrer"
           >LinkedIn</a>
         </div>
-        <div class="flex-col pb-10 md:pb-6 flex gap-2 pt-2 md:p-0">
+        <div class="order-first flex-col pb-10 md:pb-6 flex gap-2 pt-2 md:p-0">
           <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit leading-tight">
             Studio
           </NuxtLink>
@@ -61,11 +61,11 @@ onUnmounted(() => {
           </NuxtLink>
 
           <NuxtLink class="block md:inline leading-tight" to="/privacy-policy">
-            Privacy
+            Privacy Policy
           </NuxtLink>
 
-          <NuxtLink class="block md:inline leading-tight" to="/legal">
-            Legal
+          <NuxtLink class="block md:inline leading-tight" to="/terms-of-service">
+            Terms of Service
           </NuxtLink>
         </div>
       </div>
