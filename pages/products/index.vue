@@ -85,18 +85,9 @@ useHead({
                   {{ p.store.title }} Collection
                 </h2>
               </NuxtLink>
-              <NuxtLink :to="`/stories/${p.linkCollection.slug.current}`">
+              <NuxtLink class="text-md pt-10" :to="`/stories/${p.linkCollection.slug.current}`">
                 Learn More
               </NuxtLink>
-            </div>
-            <div v-else>
-              <nuxt-picture
-                :src="$urlFor(p.vector.asset.url).url()"
-                :alt="p.store.title"
-              />
-              <h2 class="absolute w-3/5 text-white text-collection sm:w-1/2 font-headline bottom-20 sm:top-64 md:top-auto md:bottom-60 left-4 md:left-10">
-                {{ p.store.title }} Collection
-              </h2>
             </div>
           </div>
         </div>

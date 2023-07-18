@@ -14,7 +14,7 @@ useHead({
       <ScrollSection bg-color="transparent">
         <div class="introSection ">
           <div class="intro absolute h-full w-full">
-            <h1 class=" text-center text-white uppercase font-judge md:text-xl min-[1900px]:text-xxl">
+            <h1 class="whitespace-break-spaces lg:w-full lg:text-xl xl:text-xxl top-[35%] xl:top-[50%] md:top-[45%] w-1/2 text-center text-homeHeadline text-white uppercase font-judge">
               A brand is a living thing.
             </h1>
           </div>
@@ -58,7 +58,7 @@ useHead({
         </ScrollSection>
 
         <ScrollSection bg-color="white">
-          <div class="container px-6 md:px-0 mx-auto md:flex">
+          <div class="container my-10 md:my-24  px-6 md:px-0 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
                 class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase leading-tight lg:w-3/4 xl:w-[500px] w-full md:pt-0"
@@ -312,11 +312,7 @@ useHead({
 
 .intro h1 {
   margin: 10px auto 10px;
-  white-space: nowrap;
-  overflow: hidden;
   position: relative;
-  @apply text-headline lg:text-xl xl:text-xxl 2xl:top-[37%] xl:top-[42%] md:top-[40%];
-  top: 42%;
 }
 
 .white {
@@ -345,7 +341,6 @@ useHead({
 .introHeadline  {
   margin: 10px auto 10px;
   white-space: nowrap;
-  overflow: hidden;
   width: auto;
   position: relative;
   top: 38%;
