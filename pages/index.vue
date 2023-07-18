@@ -23,7 +23,7 @@ useHead({
           <div class="px-6 md:px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl  uppercase leading-tight w-[62%] md:w-[43%] md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl  uppercase leading-tight w-[62%] md:w-[46%] md:pt-0"
               >
                 It’s not what we do. It’s who we are.
               </h3>
@@ -49,7 +49,7 @@ useHead({
           <div class="px-6 md:px-8 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-full md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight md:w-3/4 w-full md:pt-0"
               >
                 We know the road, but we’re still exploring
               </h3>
@@ -70,7 +70,7 @@ useHead({
           <div class=" px-6 md:px-8 mx-auto redbg mt-36 md:mt-6 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-full md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-xl uppercase leading-tight w-full md:w-4/5 md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
