@@ -34,19 +34,29 @@ const query = groq`*[_type == "story" && slug.current == "${route.params.id}"][0
 const sanity = useSanity()
 /* fetch single post from sanity */
 const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
-
-useHead({ title: story.value?.title })
 </script>
 
 <template>
   <div v-if="story" class="md:px-4 mx-auto mt-6 ax-w-screen-lg bg-orange">
+    <Head>
+      <Title>
+        {{
+          story.title
+        }} | Adopt
+      </Title>
+
+      <Meta
+        name="og:image"
+        :content="story.image || undefined"
+      />
+    </Head>
     <div class="md:container mx-auto md:px-6 lg:px-24 py-20">
       <nuxt-picture :src="$urlFor(story.image.asset._ref).url()" />
 
-      <h1 class=" mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
+      <h1 class=" md:w-full w-3/4 mt-12 md:mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
         {{ story.title }}
       </h1>
-      <h3 class="px-6 md:px-0">
+      <h3 class="px-6 md:px-0  md:w-full w-3/4">
         {{ story.subtitle }}
       </h3>
       <div class="my-10 md:my-36 px-6 md:px-0 md:flex nowrap space-between gap-10">
@@ -74,7 +84,7 @@ useHead({ title: story.value?.title })
       <div class="md:w-1/2 mt-6 mb-24 px-6 md:px-0">
         <SanityBlocks :blocks="story.signoff" />
       </div>
-      <div class="flex md:mt-0 mt-36 justify-center">
+      <div class="flex min-h-screen items-center md:mt-0 mt-36 justify-center">
         <nuxt-picture :src="$urlFor(story.lastImage.asset._ref).url()" />
       </div>
     </div>

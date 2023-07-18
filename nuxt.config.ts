@@ -7,7 +7,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      title: 'We Are Adopt',
+      title: 'Test',
       meta: [
         // <meta name="description" content="My amazing site">
         { charset: 'utf-8' },
@@ -24,7 +24,7 @@ export default defineNuxtConfig({
         },
         {
           name: 'og:title',
-          content: 'We Are Adopt',
+          content: 'Adopt',
         },
         {
           name: 'twitter:card',

@@ -1,22 +1,25 @@
-<script>
-export default {
-  data() {
-    return {
-      currentYear: new Date().getFullYear(),
-    }
-  },
-  computed: {
-    isStudio() {
-      return this.$route.path == '/studio' || this.$route.path == '/studio'
-    },
-    isBlog() {
-      return this.$route.path == '/advice' || this.$route.path == '/advice'
-    },
-    isHome() {
-      return this.$route.path == '/' || this.$route.path == '/index'
-    },
-  },
-}
+<script setup>
+const currentYear = new Date().getFullYear()
+const isHome = computed(() => {
+  return route.path === '/' || route.path === '/home'
+})
+const isStudio = computed(() => {
+  return route.path === '/studio' || route.path === '/studio'
+})
+
+onMounted(() => {
+  const footer = document.querySelector('.footer')
+  console.log(document.scrollingElement)
+
+  window.addEventListener('scroll', () => {
+    const currentScrollPos = window.scrollY
+    const height = window.innerHeight
+    footer.classList.toggle('show', height + currentScrollPos >= document.scrollingElement.scrollHeight)
+  })
+})
+onUnmounted(() => {
+  window.removeEventListener('scroll')
+})
 </script>
 
 <template>
@@ -60,6 +63,10 @@ export default {
           <NuxtLink class="block md:inline leading-tight" to="/privacy-policy">
             Privacy
           </NuxtLink>
+
+          <NuxtLink class="block md:inline leading-tight" to="/legal">
+            Legal
+          </NuxtLink>
         </div>
       </div>
 
@@ -76,7 +83,15 @@ export default {
 }
 
 .footer svg {
-  rotate: 180deg;
+  position: relative;
+  transform: rotate(0deg);
+  transition: 300ms linear all;
+
+}
+.footer.show svg {
+  transform: rotate(180deg);
+  bottom:0%;
+
 }
 @media (max-width: 768px) {
 

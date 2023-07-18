@@ -18,12 +18,6 @@ useNuxtApp().hook('apollo:error', (error) => {
 const isShopValid = computed(() => !!useShop().shop.value?.id || false)
 
 const { shop } = useShop()
-useHead({
-  titleTemplate: (titleChunk?: string) =>
-    titleChunk
-      ? `${titleChunk} | ${shop.value?.name}`
-      : shop.value?.name || 'Shopify Nuxt',
-})
 
 onMounted(() => {
   const observer = new IntersectionObserver((entries) => {

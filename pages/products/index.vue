@@ -56,7 +56,7 @@ results.value = data.value.results
 count.value = data.value.count
 
 useHead({
-  title: computed(() => 'The Adopt Shop'),
+  title: computed(() => 'Shop | Adopt | Sport, Athletes, Culture'),
 })
 </script>
 
@@ -67,22 +67,28 @@ useHead({
         The Adopt Shop
       </h1>
       <p class="mb-0">
-        Curated products inspired by the world of sport, athletes and culture. 100% of proceeds from the sale of these items are contributed to support access to youth sports for girls in Portland, Oregon.
+        Curated products inspired by the world of sport, athletes and culture. 100% of proceeds from the sale of these items are contributed to support access to youth sports for girls.
       </p>
     </div>
     <div v-for="p in data.collection" :key="p.id" class="my-6  md:my-0">
       <div class="relative grid gap-6 mx-auto md:pt-10 md:grid-cols-2">
         <div class="relative collectionTile min-h-[520px] ">
-          <div class="absolute w-full h-full">
-            <NuxtLink v-if="p.linkCollection" :to="`/stories/${p.linkCollection.slug.current}`">
-              <nuxt-picture
-                :src="$urlFor(p.vector.asset.url).url()"
-                :alt="p.store.title"
-              />
-              <h2 class="absolute w-3/5 text-white text-collection sm:w-1/2 font-headline bottom-20 sm:top-64 md:top-auto md:bottom-60 left-4 md:left-10">
-                {{ p.store.title }} Collection
-              </h2>
-            </NuxtLink>
+          <div>
+            <div v-if="p.linkCollection" class="collection">
+              <NuxtLink :to="`/stories/${p.linkCollection.slug.current}`">
+                <nuxt-picture
+                  v-if="p.vector"
+                  :src="$urlFor(p.vector.asset.url).url()"
+                  :alt="p.store.title"
+                />
+                <h2 class="md:w-3/5 w-4/5 mt-6 md:mt-3 uppercase md:px-0 text-mobilexl font-judge">
+                  {{ p.store.title }} Collection
+                </h2>
+              </NuxtLink>
+              <NuxtLink :to="`/stories/${p.linkCollection.slug.current}`">
+                Learn More
+              </NuxtLink>
+            </div>
             <div v-else>
               <nuxt-picture
                 :src="$urlFor(p.vector.asset.url).url()"
@@ -125,50 +131,8 @@ useHead({
   margin: 2rem 0;
 }
 
-.post img {
-  @apply w-full min-h-[480px] ;
+.collection img {
+  @apply w-full;
    object-fit: cover;
 }
-
-@media (max-width: 850px) {
-
-    .collectionTile h2 {
-      top: 50%;
-    }
-
-    .collectionTile img {
-      width: 100%;
-    }
-
-  }
-
-  @media (max-width: 768px) {
-    .collectionTile {
-      min-height: 800px ;
-      margin-bottom: 40px;
-    }
-    .collectionTile h2 {
-      top: 80%;
-    }
-  }
-
-  @media (max-width: 650px) {
-    .collectionTile {
-      min-height: 650px ;
-      margin-bottom: 00px;
-    }
-    .collectionTile h2 {
-      top: 60%;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .collectionTile {
-      min-height: 480px ;
-      margin-bottom: 00px;
-    }
-    .collectionTile h2 {
-      top: 60%;
-    }
-  }
 </style>

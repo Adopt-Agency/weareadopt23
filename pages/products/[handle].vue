@@ -49,7 +49,7 @@ const addToCart = async () => {
           <Title>
             {{
               result.product.seo.title || result.product.title || undefined
-            }}
+            }} | Adopt | Shop
           </Title>
           <Meta
             name="description"
