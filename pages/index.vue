@@ -82,7 +82,7 @@ useHead({
           <div class="container px-6 md:px-0 mx-auto redbg mt-36 md:mt-6 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase  w-full md:w-4/5 md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase  w-full md:w-4/5 xl:w-[70%] md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
