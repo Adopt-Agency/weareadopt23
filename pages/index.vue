@@ -14,7 +14,7 @@ useHead({
       <ScrollSection bg-color="transparent">
         <div class="introSection ">
           <div class="intro absolute h-full w-full">
-            <h1 class="whitespace-break-spaces lg:w-full lg:text-xl xl:text-xxl top-[35%] xl:top-[47%] md:top-[45%] w-1/2 text-center text-mobilexl text-white uppercase font-judge">
+            <h1 class="whitespace-break-spaces lg:w-full lg:text-xl xl:text-xxl top-[35%] xl:top-[43%] md:top-[45%] w-[63%] md:w-1/2 text-center text-homeHeadline text-white uppercase font-judge">
               A brand is a living thing.
             </h1>
           </div>

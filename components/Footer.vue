@@ -14,9 +14,8 @@ onMounted(() => {
 
   window.addEventListener('scroll', () => {
     const currentScrollPos = window.scrollY
-    const height = window.innerHeight
     if (currentScrollPos > header_height)
-      footer.setAttribute('transform', `rotate(${currentScrollPos}) scale(0.9)`)
+      footer.setAttribute('style', `transform:rotate(${currentScrollPos}deg) `)
   })
 })
 onUnmounted(() => {

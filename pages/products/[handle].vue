@@ -178,7 +178,7 @@ const addToCart = async () => {
             </div>
           </div>
           <div v-for="tag in result.product.tags">
-            <div v-if="tag === 'Mia Lee'" class="mt-20 ">
+            <div v-if="tag === 'mia lee'" class="mt-20 ">
               <p>
                 Adopt x Mia Lee Collection
               </p>

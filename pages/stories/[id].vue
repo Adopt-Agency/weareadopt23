@@ -50,7 +50,7 @@ const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
         :content="story.image || undefined"
       />
     </Head>
-    <div class="md:container mx-auto md:px-6 lg:px-24 pt-20">
+    <div class="md:container story mx-auto md:px-6 lg:px-24 pt-20">
       <nuxt-picture :src="$urlFor(story.image.asset._ref).url()" />
 
       <h1 class=" md:w-full w-3/4 mt-12 md:mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
@@ -97,6 +97,12 @@ const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
 }
 .two-col {
   @apply col-auto;
+}
+
+.story a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+
 }
 
 .med-width {
