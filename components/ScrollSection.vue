@@ -29,6 +29,7 @@ onMounted(() => {
 // When the component is removed, disconnect the observer (clean-up step)
 onUnmounted(() => {
   observer.value.disconnect()
+  document.body.setAttribute('class', '#FFFFFF')
 })
 </script>
 

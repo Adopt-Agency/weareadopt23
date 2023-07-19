@@ -14,28 +14,28 @@ useHead({
       <ScrollSection bg-color="transparent">
         <div class="introSection ">
           <div class="intro absolute h-full w-full">
-            <h1 class="whitespace-break-spaces lg:w-full lg:text-xl xl:text-xxl top-[35%] xl:top-[50%] md:top-[45%] w-1/2 text-center text-homeHeadline text-white uppercase font-judge">
+            <h1 class="whitespace-break-spaces lg:w-full lg:text-xl xl:text-xxl top-[35%] xl:top-[47%] md:top-[45%] w-1/2 text-center text-mobilexl text-white uppercase font-judge">
               A brand is a living thing.
             </h1>
           </div>
         </div>
         <video id="video-background" class="block min-h-screen  md:w-full  md:min-h-screen md:min-h-0 md:hidden top-0 left-0 video-bg" autoplay loop muted playsinline>
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/7452ede21471b88d55debbf1d6a8b7e5b1fd30dc.mp4" type="video/mp4">
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/da84052cc459648cca11610f90c960f5fa9207aa.webm" type="video/webm">
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/a9dde7322aef2b53b0a441ac20411cbf63becf31.mp4" type="video/mp4">
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/e64d532dfbcb7b2f9e01caa827ff2bd1f6e9d00e.webm" type="video/webm">
         </video>
 
         <video id="video-background" class="md:block md:min-h-screen  md:w-full min-h-0  hidden top-0 left-0 video-bg" autoplay loop muted playsinline>
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/7452ede21471b88d55debbf1d6a8b7e5b1fd30dc.mp4" type="video/mp4">
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/da84052cc459648cca11610f90c960f5fa9207aa.webm" type="video/webm">
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/31c933832b866f7c5fbdef296d05e6c946d6eff2.mp4" type="video/mp4">
+          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/4d6d8c9dce54c470303ee6ab844caa74f0a2747f.webm" type="video/webm">
         </video>
       </ScrollSection>
 
       <div id="studio" class=" md:pt-48 pt-36 text-red text">
         <ScrollSection bg-color="white">
-          <div class="container px-6 xl:px-0  mx-auto md:flex">
+          <div class="container px-6 2xl:px-0  mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline  uppercase leading-tight w-[62%] :w-[50%] 2xl:w-[35%] md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline  uppercase  w-[200px] lg:w-[50%] 2xl:w-[35%] md:pt-0"
               >
                 It’s not what we do. It’s who we are.
               </h3>
@@ -58,10 +58,10 @@ useHead({
         </ScrollSection>
 
         <ScrollSection bg-color="white">
-          <div class="container my-10 md:my-24  px-6 md:px-0 mx-auto md:flex">
+          <div class="container my-10 md:my-24 redbg px-6 md:px-0 mx-auto md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase leading-tight lg:w-3/4 xl:w-[500px] w-full md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase  lg:w-3/4 xl:w-[500px] w-full md:pt-0"
               >
                 We know the road, but we’re still exploring
               </h3>
@@ -82,7 +82,7 @@ useHead({
           <div class="container px-6 md:px-0 mx-auto redbg mt-36 md:mt-6 md:flex">
             <div class="md:w-1/2">
               <h3
-                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase leading-tight w-full md:w-4/5 md:pt-0"
+                class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase  w-full md:w-4/5 md:pt-0"
               >
                 Greatness follows inspiration, not orders.
               </h3>
@@ -260,12 +260,12 @@ useHead({
         </ScrollSection>
 
         <ScrollSection bg-color="white">
-          <div ref="currentSection" class="pb-10 duration-300 ease-in-out text-red md:mt-24 pt-20 md:pt-40 section bgWhite">
+          <div ref="currentSection" class="pb-10 duration-300 ease-in-out text-red mt-64 pt-20 md:pt-40 section bgWhite">
             <div class="container px-6 md:px-0 mx-auto ">
               <div class="md:flex">
                 <div class="md:w-1/2">
                   <h3
-                    class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase leading-tight w-3/5 md:w-1/3 md:pt-0"
+                    class="mb-2 md:mb-0 md:pb-6 font-judge text-mobilexl md:text-homeHeadline uppercase  w-3/5 md:w-1/3 md:pt-0"
                   >
                     Still with us?
                   </h3>
@@ -329,6 +329,10 @@ useHead({
 
 .red {
   @apply bg-red;
+}
+.red .bgW {
+  @apply bg-white;
+
 }
 
 .red .brandLogo svg path {

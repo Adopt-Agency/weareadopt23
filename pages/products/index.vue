@@ -81,7 +81,7 @@ useHead({
                   :src="$urlFor(p.vector.asset.url).url()"
                   :alt="p.store.title"
                 />
-                <h2 class="md:w-3/5 w-4/5 mt-6 md:mt-3 uppercase md:px-0 text-mobilexl font-judge">
+                <h2 class="md:w-3/5 w-4/5 mt-6 md:mt-3 uppercase md:px-0 text-headline md:text-mobilexl font-judge">
                   {{ p.store.title }} Collection
                 </h2>
               </NuxtLink>

@@ -50,13 +50,13 @@ const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
         :content="story.image || undefined"
       />
     </Head>
-    <div class="md:container mx-auto md:px-6 lg:px-24 py-20">
+    <div class="md:container mx-auto md:px-6 lg:px-24 pt-20">
       <nuxt-picture :src="$urlFor(story.image.asset._ref).url()" />
 
       <h1 class=" md:w-full w-3/4 mt-12 md:mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
         {{ story.title }}
       </h1>
-      <h3 class="px-6 md:px-0  md:w-full w-3/4">
+      <h3 class="px-6 md:px-0  md:w-full w-[85%] leading-tight pt-6 md:pt-0">
         {{ story.subtitle }}
       </h3>
       <div class="my-10 md:my-36 px-6 md:px-0 md:flex nowrap space-between gap-10">
@@ -84,7 +84,7 @@ const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
       <div class="md:w-1/2 mt-6 mb-24 px-6 md:px-0">
         <SanityBlocks :blocks="story.signoff" />
       </div>
-      <div class="flex min-h-screen items-center md:mt-0 mt-36 justify-center">
+      <div class="flex min-h-[70vh] items-center md:mt-0 justify-center">
         <nuxt-picture :src="$urlFor(story.lastImage.asset._ref).url()" />
       </div>
     </div>
