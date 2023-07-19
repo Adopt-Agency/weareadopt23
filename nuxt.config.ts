@@ -33,7 +33,7 @@ export default defineNuxtConfig({
         {
           name: 'og:image',
           content:
-            'https://cdn.sanity.io/images/vaa5yjnh/production/fb6d741dd7606c8a272438b2bb06c6c5a13ba9f0-270x270.jpg',
+            'https://cdn.sanity.io/images/vaa5yjnh/production/15b30ffec2d6ad1eb135257fee8fb8f1316f616a-785x785.jpg',
         },
       ],
       link: [
