@@ -110,7 +110,7 @@ defineExpose({
                   </NuxtLink>
                 </li>
                 <li>
-                  <NuxtLink to="/products" @click.prevent="showMenu = false">
+                  <NuxtLink to="/shop" @click.prevent="showMenu = false">
                     Shop
                   </NuxtLink>
                 </li>

@@ -94,7 +94,7 @@ useHead({
         <div v-for="module in p.modules" :key="module.id" class="relative post mb-0 md:mb-16 ">
           <NuxtLink
             :key="module.productWithVariant.product.store.title"
-            :to="`/products/${module.productWithVariant.product.store.slug.current}`"
+            :to="`/shop/${module.productWithVariant.product.store.slug.current}`"
             class="block "
           >
             <nuxt-picture

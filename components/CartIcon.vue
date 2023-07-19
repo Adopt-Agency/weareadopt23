@@ -11,7 +11,7 @@ export default {
 
 <template>
   <div class="md:w-[calc(50%-70px)] md:w-[calc(50%-100px)]  relative right-[1rem] flex justify-end">
-    <NuxtLink to="/products" class="hidden link pr-2 md:inline text-inherit">
+    <NuxtLink to="/shop" class="hidden link pr-2 md:inline text-inherit">
       Shop
     </NuxtLink><NuxtLink to="/cart" class="no-underline ">
       <span v-if="cartVal > 0">( {{ cartVal }} )</span>
