@@ -104,9 +104,9 @@ useHead({
               height="941"
               class="productPhoto"
             />
-            <span class="block mt-4 leading-none text-md font-heading "> {{ p.abbreviated }} </span>
-            <span v-if="p.store.title === 'Adopt' " class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
-            <span v-if="p.store.title === 'Adopt x Mia Lee' " class="leading-none text-md font-heading ">{{ module.productWithVariant.product.store.title.replace("Adopt x Mia Lee ", "") }} </span>
+
+            <span v-if=" module.productWithVariant.product.store.title.includes('Adopt x Mia Lee') " class="leading-none text-md font-heading"><span class="block mt-4 leading-none text-md font-heading"> Adopt x Mia Lee</span> {{ module.productWithVariant.product.store.title.replace("Adopt x Mia Lee ", "") }} </span>
+            <span v-else class="leading-none text-md font-heading  "><span class="block mt-4 leading-none text-md font-heading"> Adopt</span> {{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
             <p class="leading-none text-md font-heading ">
               ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
             </p>
