@@ -86,7 +86,6 @@ onUnmounted(() => {
 
 .footer svg {
   position: relative;
-  transition: 300ms linear all;
 
 }
 .footer.show svg {
