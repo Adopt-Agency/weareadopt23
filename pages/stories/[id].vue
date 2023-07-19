@@ -53,10 +53,10 @@ const { data: story } = await useAsyncData('story', () => sanity.fetch(query))
     <div class="md:container story mx-auto md:px-6 lg:px-24 pt-20">
       <nuxt-picture :src="$urlFor(story.image.asset._ref).url()" />
 
-      <h1 class=" lg:w-1/3 w-1/2 w-3/4 mt-12 md:mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
+      <h1 class=" lg:w-[450px] w-1/2 w-3/4 mt-12 md:mt-20 uppercase px-6 md:px-0 md:text-xl text-mobilexl font-judge">
         {{ story.title }}
       </h1>
-      <h3 class="px-6 md:px-0 xl:w-[20%]  lg:w-1/4 w-[85%] leading-tight pt-6 md:pt-0">
+      <h3 class="px-6 md:px-0 xl:w-[280px]  lg:w-1/4 w-[85%] leading-tight pt-6 md:pt-0">
         {{ story.subtitle }}
       </h3>
       <div class="my-10 md:my-36 px-6 md:px-0 md:flex nowrap space-between gap-10">
