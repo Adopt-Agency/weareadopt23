@@ -18,8 +18,12 @@ const { result, loading, onResult } = useQuery<ProductReturn>(
 // if there is only one variant, select it
 // otherwise, leave it null
 const selectedVariant = ref<ProductVariant | null>(null)
+
 const assignInitialVariant = () => {
-  selectedVariant.value = result.value?.product.variants.edges[0].node
+  if (result.value?.product.variants.edges.length === 1)
+    selectedVariant.value = result.value?.product.variants.edges[0].node
+  else
+    selectedVariant.value = null
 }
 
 onResult(assignInitialVariant)
@@ -129,9 +133,9 @@ const addToCart = async () => {
                 v-html="result.product.descriptionHtml"
               />
 
-              <div v-if="selectedVariant?.title != 'Default Title'" class="flex flex-wrap gap-2 my-6 md:my-10 ">
+              <div v-if="selectedVariant?.title != 'Default Title' " class="flex flex-wrap gap-2 my-6 md:my-10 ">
                 <div v-for="option in result.product.options" :key="option.id" class="">
-                  <p class="text-md">
+                  <p v-if="selectedVariant?.quantityAvailable" class="text-md">
                     {{ option.name }}  —  {{ selectedVariant?.title }}
                   </p>
 
@@ -166,9 +170,9 @@ const addToCart = async () => {
 
               <div>
                 <UIButton
-                  :disabled="!selectedVariant?.id"
+                  :disabled="!selectedVariant?.quantityAvailable"
                   aria-label="Add to Cart"
-                  class="block w-64 px-10 py-2 text-white transition duration-300 ease-out bg-black rounded-md md:mt-6 md:mx-auto xl:mt-0 hover:ease-in hover:border md:inline md:w-64 hover:text-black hover:bg-white"
+                  class="disabled:opacity-25 disabled:hover:bg-black  disabled:hover:text-white  block w-64 px-10 py-2 text-white transition duration-300 ease-out bg-black rounded-md md:mt-6 md:mx-auto xl:mt-0 hover:ease-in hover:border md:inline md:w-64 hover:text-black hover:bg-white"
                   :loading="loadingAddToCart"
                   @click="addToCart"
                 >
@@ -179,7 +183,7 @@ const addToCart = async () => {
           </div>
           <div v-for="tag in result.product.tags">
             <div v-if="tag === 'mia lee'" class="mt-20 ">
-              <p>
+              <p class="font-headline">
                 Adopt x Mia Lee Collection
               </p>
               <div class="flex no-wrap flex-col md:flex-row gap-10">
