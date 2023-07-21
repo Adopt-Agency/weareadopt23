@@ -20,13 +20,13 @@ useHead({
           </div>
         </div>
         <video id="video-background" class="block min-h-screen  md:w-full  md:min-h-screen md:min-h-0 md:hidden top-0 left-0 video-bg" autoplay loop muted playsinline>
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/a9dde7322aef2b53b0a441ac20411cbf63becf31.mp4" type="video/mp4">
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/e64d532dfbcb7b2f9e01caa827ff2bd1f6e9d00e.webm" type="video/webm">
+          <source src="https://cdn.shopify.com/videos/c/o/v/5dc95247caba4b1cb91cc03a241ea18e.mp4" type="video/mp4">
+          <source src="https://cdn.shopify.com/videos/c/o/v/30a18e4c3703413195ba98b820f82b25.webm" type="video/webm">
         </video>
 
         <video id="video-background" class="md:block md:min-h-screen  md:w-full min-h-0  hidden top-0 left-0 video-bg" autoplay loop muted playsinline>
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/31c933832b866f7c5fbdef296d05e6c946d6eff2.mp4" type="video/mp4">
-          <source src="https://cdn.sanity.io/files/vaa5yjnh/production/4d6d8c9dce54c470303ee6ab844caa74f0a2747f.webm" type="video/webm">
+          <source src="https://cdn.shopify.com/videos/c/o/v/369210ab91fe4b5eb35cf4a29430ff69.mp4" type="video/mp4">
+          <source src="https://cdn.shopify.com/videos/c/o/v/2de3effbe36c49018e29aa9f95a9352d.webm" type="video/webm">
         </video>
       </ScrollSection>
 
