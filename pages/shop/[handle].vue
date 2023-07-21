@@ -20,10 +20,7 @@ const { result, loading, onResult } = useQuery<ProductReturn>(
 const selectedVariant = ref<ProductVariant | null>(null)
 
 const assignInitialVariant = () => {
-  if (result.value?.product.variants.edges.length === 1)
-    selectedVariant.value = result.value?.product.variants.edges[0].node
-  else
-    selectedVariant.value = null
+  selectedVariant.value = result.value?.product.variants.edges[0].node
 }
 
 onResult(assignInitialVariant)
