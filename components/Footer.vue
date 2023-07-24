@@ -52,6 +52,10 @@ onUnmounted(() => {
             target="_blank"
             rel="noopener noreferrer"
           >LinkedIn</a>
+
+          <NuxtLink class="block md:inline leading-tight" to="/shipping-and-returns">
+            Shipping & Returns
+          </NuxtLink>
         </div>
         <div class="order-first flex-col pb-10 md:pb-6 flex gap-2 pt-2 md:p-0">
           <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit leading-tight">
