@@ -24,3 +24,9 @@ useHead({
     </div>
   </div>
 </template>
+
+<style>
+strong {
+  @apply font-headline;
+}
+</style>
