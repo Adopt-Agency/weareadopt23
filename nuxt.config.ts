@@ -7,7 +7,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-      title: 'Test',
       meta: [
         // <meta name="description" content="My amazing site">
         { charset: 'utf-8' },

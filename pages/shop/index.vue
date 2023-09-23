@@ -19,6 +19,7 @@ const query = groq`{ "collection": *[_type == "collection"] {
   },
 
   modules [] {
+    image,
     productWithVariant {
      product -> {
        images [] {
@@ -30,6 +31,13 @@ const query = groq`{ "collection": *[_type == "collection"] {
        store {
        slug {
          current
+       },
+       variants [] -> {
+        store {
+          inventory {
+            isAvailable
+          }
+        }
        },
        title,
       priceRange {
@@ -72,9 +80,9 @@ useHead({
     </div>
     <div v-for="p in data.collection" :key="p.id" class="my-6  md:my-0">
       <div class="relative grid gap-6 mx-auto md:pt-10 md:grid-cols-2">
-        <div class="relative collectionTile min-h-[520px] ">
+        <div v-if="p.linkCollection" class="relative collectionTile min-h-[520px] ">
           <div>
-            <div v-if="p.linkCollection" class="collection">
+            <div class="collection">
               <NuxtLink :to="`/stories/${p.linkCollection.slug.current}`">
                 <nuxt-picture
                   v-if="p.vector"
@@ -92,25 +100,51 @@ useHead({
           </div>
         </div>
         <div v-for="module in p.modules" :key="module.id" class="relative post mb-0 md:mb-16 ">
-          <NuxtLink
-            :key="module.productWithVariant.product.store.title"
-            :to="`/shop/${module.productWithVariant.product.store.slug.current}`"
-            class="block "
-          >
-            <nuxt-picture
-              :src="$urlFor(module.productWithVariant.product.images[0].asset.url).url()"
-              :alt="p.store.title"
-              width="660"
-              height="941"
-              class="productPhoto"
-            />
+          <div v-if="module.image">
+            test
+          </div>
+          <div v-else>
+            <NuxtLink
+              :key="module.productWithVariant.product.store.title"
+              :to="`/shop/${module.productWithVariant.product.store.slug.current}`"
+              class="block "
+            >
+              <div v-if="module.productWithVariant.product.store.variants[0].store.inventory.isAvailable === false" class="flex items-center gap-2">
+                <nuxt-picture
+                  :src="$urlFor(module.productWithVariant.product.images[0].asset.url).url()"
+                  :alt="p.store.title"
+                  width="660"
+                  style="opacity:0.5;"
+                  height="941"
+                  class="productPhoto"
+                />
+              </div>
 
-            <span v-if=" module.productWithVariant.product.store.title.includes('Adopt x Mia Lee') " class="leading-none text-md font-heading"><span class="block mt-4 leading-none text-md font-heading"> Adopt x Mia Lee</span> {{ module.productWithVariant.product.store.title.replace("Adopt x Mia Lee ", "") }} </span>
-            <span v-else class="leading-none text-md font-heading  "><span class="block mt-4 leading-none text-md font-heading"> Adopt</span> {{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
-            <p class="leading-none text-md font-heading ">
-              ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
-            </p>
-          </NuxtLink>
+              <div v-else>
+                <nuxt-picture
+                  :src="$urlFor(module.productWithVariant.product.images[0].asset.url).url()"
+                  :alt="p.store.title"
+                  width="660"
+                  height="941"
+                  class="productPhoto"
+                />
+              </div>
+
+              <span v-if=" module.productWithVariant.product.store.title.includes('Adopt x Mia Lee') " class="leading-none text-md font-heading"><span class="block mt-4 leading-none text-md font-heading"> Adopt x Mia Lee</span> {{ module.productWithVariant.product.store.title.replace("Adopt x Mia Lee ", "") }} </span>
+              <span v-else class="leading-none text-md font-heading  "><span class="block mt-4 leading-none text-md font-heading"> Adopt</span> {{ module.productWithVariant.product.store.title.replace("Adopt ", "") }} </span>
+              <div v-if="module.productWithVariant.product.store.variants[0].store.inventory.isAvailable === false" class="flex items-center gap-2">
+                <p class="leading-none text-md font-heading ">
+                  SOLD OUT
+                </p>
+              </div>
+
+              <div v-else class="flex gap-2">
+                <p class="leading-none text-md font-heading ">
+                  ${{ module.productWithVariant.product.store.priceRange.minVariantPrice }}
+                </p>
+              </div>
+            </NuxtLink>
+          </div>
         </div>
       </div>
     </div>

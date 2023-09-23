@@ -136,6 +136,10 @@ const addToCart = async () => {
                     {{ option.name }}  —  {{ selectedVariant?.title }}
                   </p>
 
+                  <p v-else class="text-md">
+                    Sold Out
+                  </p>
+
                   <div class="flex flex-wrap gap-2 mt-6">
                     <div
                       v-for="variant in result.product.variants.edges.map(
