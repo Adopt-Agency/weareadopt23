@@ -19,7 +19,21 @@ const query = groq`{ "collection": *[_type == "collection"] {
   },
 
   modules [] {
-    image,
+    image {
+      asset-> {
+        url,
+        altText
+      }
+    },
+    titleProxy,
+    links {
+      title,
+      reference -> {
+        slug {
+          current
+        }
+      }
+    },
     productWithVariant {
      product -> {
        images [] {
@@ -80,28 +94,22 @@ useHead({
     </div>
     <div v-for="p in data.collection" :key="p.id" class="my-6  md:my-0">
       <div class="relative grid gap-6 mx-auto md:pt-10 md:grid-cols-2">
-        <div v-if="p.linkCollection" class="relative collectionTile min-h-[520px] ">
-          <div>
+        <div v-for="module in p.modules" :key="module.id" class="relative post mb-0 md:mb-16 ">
+          <div v-if="module.links">
             <div class="collection">
-              <NuxtLink :to="`/stories/${p.linkCollection.slug.current}`">
+              <NuxtLink :to="`/stories/${module.links.reference.slug.current}`">
                 <nuxt-picture
-                  v-if="p.vector"
-                  :src="$urlFor(p.vector.asset.url).url()"
-                  :alt="p.store.title"
+                  :src="$urlFor(module.image.asset.url).url()"
+                  :alt="module.links.title"
                 />
                 <h2 class="md:w-3/5 w-4/5 mt-6 md:mt-3 uppercase md:px-0 text-headline md:text-mobilexl font-judge">
-                  {{ p.store.title }} Collection
+                  {{ module.titleProxy }}
                 </h2>
               </NuxtLink>
-              <NuxtLink class="text-md pt-10" :to="`/stories/${p.linkCollection.slug.current}`">
-                Learn More
+              <NuxtLink class="text-md pt-10" :to="`/stories/${module.links.reference.slug.current}`">
+                {{ module.links.title }}
               </NuxtLink>
             </div>
-          </div>
-        </div>
-        <div v-for="module in p.modules" :key="module.id" class="relative post mb-0 md:mb-16 ">
-          <div v-if="module.image">
-            test
           </div>
           <div v-else>
             <NuxtLink
