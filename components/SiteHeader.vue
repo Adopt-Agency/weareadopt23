@@ -94,24 +94,12 @@ defineExpose({
                   <line x1="6" y1="6" x2="18" y2="18" />
                 </svg>
               </button>
-              <div>
-                <NuxtLink to="/cart" class="no-underline md:pr-6">
-                  <span class="pr-1">Bag</span>
-                  <span v-if="cartVal >= 1">( {{ cartVal }} )</span>
-                  <span v-else>( 0 )</span>
-                </NuxtLink>
-              </div>
             </div>
             <div class="mobile-content">
               <ul class="pt-10 pb-4 menu-list">
                 <li>
                   <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit" @click.prevent="showMenu = false">
                     Studio
-                  </NuxtLink>
-                </li>
-                <li>
-                  <NuxtLink to="/shop" @click.prevent="showMenu = false">
-                    Shop
                   </NuxtLink>
                 </li>
               </ul>
@@ -197,7 +185,11 @@ defineExpose({
           </defs>
         </svg>
       </NuxtLink>
-      <CartIcon />
+      <div class="md:w-[calc(50%-70px)] md:w-[calc(50%-100px)]  relative right-[1rem] flex justify-end">
+        <a href="mailto:hello@weareadopt.com" class="text-inherit">
+          Contact
+        </a>
+      </div>
     </div>
   </header>
 </template>
