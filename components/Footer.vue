@@ -61,9 +61,6 @@ onUnmounted(() => {
           <NuxtLink :to="{ path: '/', hash: `#studio` }" class="text-inherit leading-tight">
             Studio
           </NuxtLink>
-          <NuxtLink class="block leading-tight md:inline leading-tight" to="/shop">
-            Shop
-          </NuxtLink>
 
           <NuxtLink class="block md:inline leading-tight" to="/privacy-policy">
             Privacy Policy
